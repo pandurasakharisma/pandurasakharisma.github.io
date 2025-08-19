@@ -369,7 +369,6 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background-color: var(--light);
         }
 
         .product-img img {
@@ -1173,14 +1172,10 @@
             filteredProducts.forEach(product => {
                 const productCard = document.createElement('div');
                 productCard.className = 'product-card';
+                productCard.setAttribute("onclick", "showProduct('${product.name}')");
                 productCard.innerHTML = `
                     <div class="product-img">
                         <img src="${product.image}" alt="${product.name}">
-                    </div>
-                    <div class="product-info">
-                        <h3>${product.name}</h3>
-                        <p>${product.origin}</p>
-                        <button class="btn" onclick="showProduct('${product.name}')" style="padding: 8px 20px; font-size: 0.9rem;">View Details</button>
                     </div>
                 `;
                 productsGrid.appendChild(productCard);

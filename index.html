@@ -1172,7 +1172,7 @@
             filteredProducts.forEach(product => {
                 const productCard = document.createElement('div');
                 productCard.className = 'product-card';
-                productCard.setAttribute("onclick", "showProduct('${product.name}')");
+                productCard.setAttribute("onclick", `showProduct('${product.name}')`);
                 productCard.innerHTML = `
                     <div class="product-img">
                         <img src="${product.image}" alt="${product.name}">
